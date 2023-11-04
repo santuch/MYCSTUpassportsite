@@ -74,8 +74,22 @@ a {
     width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
+/* For screens with a maximum width of 767px (mobile phones): */
+@media only screen and (max-width: 767px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* For tablets (768px to 1024px): */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    [class*="col-"] {
+        width: 50%;
+    }
+}
+
+/* For desktop screens (min-width: 1025px and above): */
+@media only screen and (min-width: 1025px) {
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
